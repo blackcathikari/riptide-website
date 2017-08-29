@@ -1,0 +1,76 @@
+---
+
+---
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		{% include head.html %}
+		
+		<script src="/js/jquery.js"></script>
+		<script src="/js/twitch.js"></script>
+	</head>
+	
+	<body>
+	
+		{% include header.html %}
+	
+		{% include banner.html %}
+		
+		<section id="twitch">
+			<div id="twitch-msg"></div>
+		</section>
+		
+		<div id="main">
+		
+			<section id="team-members">
+				<h1 id="team-members-heading">The Team</h1>
+				<div id="team-cards">
+					{% for member in site.data.members %}
+						<div class="team-card">
+							{% if member.image != null %}
+								<img src="/images/team/{{ member.image }}" />
+							{% endif %}
+							<div class="team-card-info">
+								<h2>{{ member.name }}</h2>
+								<p>
+									{{ member.rank }} | {{ member.position }}
+								</p>
+								<p>
+									{{ member.weapons }}
+								</p>
+								{% if member.links %}
+									<div class="team-card-btns">
+										{% if member.twitch != null %}
+											<a href="{{ member.twitch }}">Twitch</a>
+										{% endif %}
+										{% if member.youtube != null %}
+											<a href="{{ member.youtube }}">YouTube</a>
+										{% endif %}
+										{% if member.twitter != null %}
+											<a href="{{ member.twitter }}">Twitter</a>
+										{% endif %}
+										{% if member.patreon != null %}
+											<a href="{{ member.patreon }}">Patreon</a>
+										{% endif %}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</section>
+			
+			<section id="team-twitter">
+				<h1 id="team-twitter-heading">Our Twitter</h1>
+				<div id="twitter-iframes">
+					<a class="twitter-timeline" href="https://twitter.com/Team_RIP_Tide" data-tweet-limit="3" data-chrome="nofooter noheader noborders transparent" data-link-color="#4ED6EB">Tweets by Team_RIP_Tide</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<a class="twitter-timeline" href="https://twitter.com/Team_RIP_Tide/lists/rip-tide" data-tweet-limit="5" data-chrome="nofooter noheader noborders" data-link-color="#4ED6EB">A Twitter List by CalamarCat</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</section>
+			
+		</div>
+	
+	</body>
+</html>

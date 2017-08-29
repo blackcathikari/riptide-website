@@ -1,0 +1,38 @@
+- name: Cat
+  ign: CalamarCat
+  position: Captain | Support
+  image: cat.png
+  rank: S
+  weapons: Ttek, Splash, Splatlings
+  links: true
+  youtube: https://www.youtube.com/channel/UCDplZFvtITfn_rzRUJmt_zg
+  twitter: https://twitter.com/CalamarCat
+  twitch: https://www.twitch.tv/CalamarCat
+  
+- name: Coach
+  ign: TheCoachAdair
+  position: Support
+  image: coach.png
+  rank: A
+  weapons: Shooters
+  links: true 
+  twitch: https://www.twitch.tv/thecoachadair
+  
+- name: Chomps
+  position: Support
+  image: chomps.jpg
+  rank: S+
+  weapons: Pro, Ttek, Splatlings
+  links: true 
+  twitch: https://www.twitch.tv/chompsontheloose
+  youtube: https://www.youtube.com/channel/UCaEzK7y_SO-7tmJEqoGfVLg?&ab_channel=ChompsOnTheLoose
+  twitter: https://twitter.com/HT_Chomps
+
+- name: Hiero
+  ign: SuperHiero
+  position: Slayer
+  image: flc.png
+  rank: S
+  weapons: Ttek, Gal, Rapid
+  links: true
+  twitch: https://www.twitch.tv/superhiero
