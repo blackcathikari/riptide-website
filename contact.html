@@ -1,0 +1,58 @@
+---
+
+---
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		{% include head.html %}
+		
+		<script src="/js/contact.js"></script>
+	</head>
+	
+	<body>
+	
+		{% include header.html %}
+	
+		{% include banner.html %}
+		
+		<main id="contact-page">
+		
+			<h1>Want to contact us?</h1>
+			
+			<p>Want to chat or organise a scrim? We're always keen to find new friends and scrim partners, so please do.</p>
+			<p>Looking to join? RIP Tide isn't recruiting right now, but feel free to leave your details with Cat if you want us to keep you in mind for the future.</p>
+			
+			<h2>Discord</h2>
+			<p>The easiest way is probably via Discord. Our team server isn't public, but feel free to ping anyone from the team. You'll be able to find us via most tournament servers, the Inkademy, the LUTI server, Sare's Squids for Days server, and various other servers. If you're a team captain looking for a scrim, let us know and we can invite you to the server to make organising future scrims easier.</p>
+			<p>In particular, Cat's Discord ID is CalamarCat#2235.</p>
+			
+			<h2>Twitter</h2>
+			<p>Feel free to ping us on twitter too, by our team account or any of the player's accounts.</p>
+			
+			<h2 style="display: none;">Email</h2>
+			<p style="display: none;">Prefer to email? Please fill out the form below and we'll get back to you as soon as possible.</p>
+			<form id="contact-form" action="mailto:calamarcat16@gmail.com" onsubmit="checkForm()" method="get" enctype="text/plain" style="display: none;">
+				<div>
+					<span><label for="name">Name:</label></span>
+					<span><input type="text" id="name" name="name" /></span>
+				</div>
+				<div>
+					<span><label for="email">Email:</label></span>
+					<span><input type="text" id="email" name="email" /></span>
+				</div>
+				<div>
+					<span><label for="message">Message:</label></span>
+					<span><textarea id="message" name="message" rows="5" cols="20"></textarea></span>
+				</div>
+				<div>
+					<span><input type="submit" value="Send" id="send" /></span>
+				</div>
+			  </form>
+			  <div id="response"></div>
+		
+		</main>
+		
+	</body>
+</html>
