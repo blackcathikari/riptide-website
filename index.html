@@ -6,71 +6,115 @@
 
 <html lang="en">
 	<head>
-		{% include head.html %}
+		<title>RIP Tide - Australian Splatoon Team</title>
+
+		<script src="../js/twitter.js"></script>
 		
-		<script src="/js/jquery.js"></script>
-		<script src="/js/twitch.js"></script>
+		<link rel="stylesheet" href="../styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		
+		<script src="../js/jquery.js"></script>
+		<script src="../js/twitch.js"></script>
 	</head>
 	
 	<body>
-	
-		{% include header.html %}
-	
-		{% include banner.html %}
-		
-		<section id="twitch">
-			<div id="twitch-msg"></div>
+		<header id="header">
+			<div id="header_content">
+				<a href="{{ site.url }}"><img id="header_logo" src="../images/logo.png" /></a>
+				<nav>
+					<ul>
+						<li><a href="#main">Team</a></li>
+						<li><a href="#news">News</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="{{ site.url }}/bingo">Bingo</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="banner">
+			<div>
+				<img id="banner_img" src="../images/temp_banner.png" />
+			</div>
 		</section>
-		
-		<div id="main">
-		
-			<section id="team-members">
-				<h1 id="team-members-heading">The Team</h1>
-				<div id="team-cards">
+
+		<section id="content">
+			<main id="main" class="content_tab">
+				<h1 class="content_tab_heading">The Team</h1>
+				<div class="content_tab_content">
+					<div id="intro_wrapper">
+						<video id="intro_img" height="240" width="320" controls autoplay muted> 
+							<source src="../clips/trailer.mp4" type="video/mp4">
+						</video>
+						<div id="intro_info">
+							<p id="intro">RIP Tide is a competitive Splatoon team from all around Australia.</p>
+							<p>We recently placed second in Div 3 of the Oceanink Series Season 2, and are looking to improve our ranking for Season 3!</p>
+							<div class="team_card_btns">
+								<a class="team_card_btn" href="https://twitter.com/RIPTideSquids"><img src="../images/icons/twitter.png"/></a>
+								<a class="team_card_btn" href="https://challonge.com/teams/rip-tide/tournaments"><img src="../images/icons/challonge.png"/></a>
+							</div>
+						</div>
+					</div>
+					<hr/>
 					{% for member in site.data.members %}
-						<div class="team-card">
-							{% if member.image != null %}
-								<img src="/images/team/{{ member.image }}" />
-							{% endif %}
-							<div class="team-card-info">
-								<h2>{{ member.name }}</h2>
-								<p>
-									{{ member.rank }} | {{ member.position }}
-								</p>
-								<p>
-									{{ member.weapons }}
-								</p>
-								{% if member.links %}
-									<div class="team-card-btns">
-										{% if member.twitch != null %}
-											<a href="{{ member.twitch }}">Twitch</a>
-										{% endif %}
-										{% if member.youtube != null %}
-											<a href="{{ member.youtube }}">YouTube</a>
-										{% endif %}
-										{% if member.twitter != null %}
-											<a href="{{ member.twitter }}">Twitter</a>
-										{% endif %}
-										{% if member.patreon != null %}
-											<a href="{{ member.patreon }}">Patreon</a>
-										{% endif %}
-									</div>
+					<div class="team_card">
+						<img class="team_card_img" src="../images/team/{{ member.image }}" />
+						<div class="team_card_info">
+							<h2>{{ member.name }}</h2>
+							<p>{{ member.state }}</p>
+							<p>{{ member.position }}</p>
+							<div class="team_card_btns">
+								{% if member.twitter != null %}
+									<a class="team_card_btn" href="{{ member.twitter }}"><img src="../images/icons/twitter.png"/></a>
+								{% endif %}
+								{% if member.twitch != null %}
+									<a class="team_card_btn" href="{{ member.twitch }}"><img src="../images/icons/twitch.png"/></a>
+								{% endif %}
+								{% if member.youtube != null %}
+									<a class="team_card_btn" href="{{ member.youtube }}"><img src="../images/icons/youtube.png"/></a>
 								{% endif %}
 							</div>
 						</div>
-					{% endfor %}
+					</div>
+				{% endfor %}
 				</div>
-			</section>
-			
-			<section id="team-twitter">
-				<h1 id="team-twitter-heading">Our Twitter</h1>
-				<div id="twitter-iframes">
-					<a class="twitter-timeline" href="https://twitter.com/Team_RIP_Tide" data-tweet-limit="3" data-chrome="nofooter noheader noborders transparent" data-link-color="#4ED6EB">Tweets by Team_RIP_Tide</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-					<a class="twitter-timeline" href="https://twitter.com/Team_RIP_Tide/lists/rip-tide" data-tweet-limit="5" data-chrome="nofooter noheader noborders" data-link-color="#4ED6EB">A Twitter List by CalamarCat</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</main>
+
+			<aside id="news">
+				<div id="twitch">
+					<div class="content_tab">
+						<h1 class="content_tab_heading">Twitch</h1>
+						<div class="content_tab_content">
+							<div id="twitch-msg"></div>
+						</div>
+					</div>
 				</div>
-			</section>
-			
-		</div>
+	
+				<div id="twitter">
+					<div class="content_tab">
+						<h1 class="content_tab_heading">Twitter</h1>
+						<div class="content_tab_content">
+							<div id="twitter-iframes">
+								<a class="twitter-timeline" href="https://twitter.com/RIPTideSquids" data-tweet-limit="3" data-chrome="nofooter noheader noborders transparent" data-link-color="#4ED6EB">Tweets by Team_RIP_Tide</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</aside>
+
+		</section>
+
+		<footer id="footer">
+			<div id="footer_content">
+				<h1 id="contact">Contact Us</h1>
+				<ul>
+					<li><strong>Twitter: </strong><a href="https://twitter.com/RIPTideSquids">@RIPTideSquids</a></li>
+					<li><strong>Discord: </strong><a href="https://discord.gg/mJ4sqEn">RIP Tide Server</a></a></li>
+					<li><strong>Email: </strong>splatoonteamriptide@gmail.com</li>
+				</ul>
+			</div>
+		</footer>
 	
 	</body>
 </html>

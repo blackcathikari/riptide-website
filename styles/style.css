@@ -1,0 +1,300 @@
+@font-face {
+    font-family: "Project Paintball";
+    src:url("Project_Paintball.otf");
+}
+
+body, div, header, footer, #main, nav, section, div, p, ul, ol, li, h1, h2, h3 {
+	color: hsl(204, 10%, 10%);
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	padding: 0;
+	margin: 0;
+	border: none;
+	line-height: 1.4em;
+}
+
+body {
+	background: #171a1c url("../images/bg_20.png") no-repeat fixed bottom;
+}
+
+h1, nav ul li a {
+	font-size: 2em;
+	color: white;
+	font-family: "Project Paintball";
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none
+}
+
+a:active, a:hover {
+	text-decoration: underline;
+}
+
+/* SPECIFIC STYLES */
+
+header, footer {
+	margin: 30px 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #148b9c;
+}
+
+#banner, #content {
+	margin: 30px auto;
+}
+
+header #header_content, footer #footer_content, #banner, #content {
+	width: 70%;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+header {
+	height: 80px;
+}
+
+#header_content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header_logo {
+	height: 100px;
+}
+
+header nav {
+	display: inline-block;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li {
+	display: inline;
+	padding: 0.5em;
+}
+
+
+
+
+#banner {
+	height: 150px;
+	overflow: hidden;
+	border: 5px solid #148b9c;
+}
+
+#banner_img {
+	width: 100%;
+	position: relative;
+	top: -50px;
+}
+
+
+
+#content {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	width: 64%;
+}
+
+main #intro_wrapper {
+	display: flex;
+	align-items: center;
+}
+
+main #intro_img {
+	width: 60%;
+	margin: 0 0 10px 0;
+}
+
+main #intro_info {
+	display: inline;
+	padding: 0 0 0 2%;
+}
+
+main #intro_info p, main #intro_info .team_card_btns {
+	margin: 0.5em 0;
+}
+
+main hr {
+	border: 0;
+	height: 1px;
+	margin: 10px 0; 
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(20, 139, 156, 0.2), rgba(0, 0, 0, 0));
+	clear: both;
+}
+
+.team_card {
+	width: 49%;
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.team_card_img {
+	width: 30%;
+	margin-right: 10px;
+	float: left;
+	border-radius: 2px;
+	border: 2px solid #148b9c;
+}
+
+.team_card_info {
+	width: 63%;
+	margin: 0;
+	padding: 2px 0;
+	display: inline-block;
+}
+
+.team_card_info p {
+	margin: 4px 0;
+}
+
+.team_card_btns {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+
+.team_card_btns a {
+	margin: 5px 10px 5px 0;
+	padding: 7px;
+	width: 22px;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #148b9c;
+	text-decoration: none;
+	color: white;
+}
+
+.team_card_btns a img {
+	position: relative;
+	top: 1px;
+}
+
+.team_card_btns a:hover {
+	background-color: #274147;
+}
+
+.team_card_btns a img {
+	height: 1em;
+}
+
+#bingo_rules {
+	padding-left: 20px;
+	margin-top: 5px;
+}
+
+#bingo_rules li {
+	line-height: 1.5em;
+}
+
+table#bingo_card {
+	border: 4px solid #148b9c;
+	border-collapse: collapse;
+	margin: 20px;
+}
+
+table#bingo_card td {
+	border: 2px solid #148b9c;
+	padding: 8px;
+	cursor: pointer;
+	text-align: center;
+	width: 20%;
+	height: 90px;
+}
+
+table#bingo_card td.selected {
+	background-color: #5ecae1;
+	color: white;
+}
+
+
+
+aside {
+	width: 32%
+}
+
+aside div#twitch {
+	display: none;
+	visibility: hidden;
+	margin-bottom: 20px;
+}
+
+.content_tab_heading {
+	background-color: #148b9c;
+	padding: 5px 10px 0px;
+	border: 5px solid #148b9c;
+	width: auto;
+	display: inline-block;
+}
+
+.content_tab_content {
+	background-color: white;
+	padding: 10px 15px;
+	border: 5px solid #148b9c;
+	/* border-radius: 2px; */
+}
+
+
+
+footer #footer_content {
+	padding: 20px 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+footer #footer_content h1 {
+	margin-bottom: 0.3em;
+}
+
+footer #footer_content ul {
+	list-style: none;
+}
+
+footer #footer_content ul li, footer #footer_content ul li a {
+	color: white;
+	margin: 5px;
+	font-size: 1.1em;
+}
+
+@media (max-width: 1250px) {
+	header #header_content, footer #footer_content, #banner, #content {
+		width: 90%;
+		max-width: initial;
+	}
+}
+
+@media (max-width: 950px) {
+	#banner {
+		display: none;
+		visibility: hidden;
+	}
+	
+	#content {
+		display: block;
+	}
+	
+	main, aside {
+		width: 100%;
+		margin: 0 auto;
+	}	
+}
+
+@media (max-width: 600px) {
+	
+}
+

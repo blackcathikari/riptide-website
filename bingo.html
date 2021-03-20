@@ -1,0 +1,94 @@
+---
+
+---
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<title>RIP Tide - Australian Splatoon Team</title>
+
+		<script src="../js/twitter.js"></script>
+		
+		<link rel="stylesheet" href="../styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		
+		<script src="../js/jquery.js"></script>
+		<script src="../js/twitch.js"></script>
+		<script src="../js/bingo.js"></script>
+	</head>
+	
+	<body>
+		<header id="header">
+			<div id="header_content">
+				<a href="{{ site.url }}"><img id="header_logo" src="../images/logo.png" /></a>
+				<nav>
+					<ul>
+						<li><a href="{{ site.url }}/#main">Team</a></li>
+						<li><a href="{{ site.url }}/#news">News</a></li>
+						<li><a href="{{ site.url }}/#contact">Contact</a></li>
+						<li><a href="#">Bingo</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section id="banner">
+			<div>
+				<img id="banner_img" src="../images/temp_banner.png" />
+			</div>
+		</section>
+
+		<section id="content">
+			<main id="main" class="content_tab">
+				<h1 class="content_tab_heading">RIP Tide Bingo!</h1>
+				<div class="content_tab_content">
+					<h2>How to:</h2>
+					<ol id="bingo_rules">
+						<li>A bingo card can only be used for one stream - you can't continue a previous card for a new stream</li>
+						<li>Any RIP Tide streams count</li>
+						<li>Click a square as you hear or see the square on stream to highlight it</li>
+						<li>If you accidentally click the wrong square, you can click it again to un-highlight it</li>
+						<li>To win, screenshot your bingo card and send it to a member of RIP Tide</li>
+					</ol>
+					<table id="bingo_card"></table>
+				</div>
+			</main>
+			
+			<aside id="news">
+				<div id="twitch">
+					<div class="content_tab">
+						<h1 class="content_tab_heading">Twitch</h1>
+						<div class="content_tab_content">
+							<div id="twitch-msg"></div>
+						</div>
+					</div>
+				</div>
+	
+				<div id="twitter">
+					<div class="content_tab">
+						<h1 class="content_tab_heading">Twitter</h1>
+						<div class="content_tab_content">
+							<div id="twitter-iframes">
+								<a class="twitter-timeline" href="https://twitter.com/RIPTideSquids" data-tweet-limit="3" data-chrome="nofooter noheader noborders transparent" data-link-color="#4ED6EB">Tweets by Team_RIP_Tide</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</aside>
+		</section>
+
+		<footer id="footer">
+			<div id="footer_content">
+				<h1 id="contact">Contact Us</h1>
+				<ul>
+					<li><strong>Twitter: </strong><a href="https://twitter.com/RIPTideSquids">@RIPTideSquids</a></li>
+					<li><strong>Discord: </strong><a href="https://discord.gg/mJ4sqEn">RIP Tide Server</a></a></li>
+					<li><strong>Email: </strong>splatoonteamriptide@gmail.com</li>
+				</ul>
+			</div>
+		</footer>
+	
+	</body>
+</html>

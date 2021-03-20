@@ -1,38 +1,44 @@
-- name: Cat
-  ign: CalamarCat
-  position: Captain | Support
+- name: CalamarCat
+  position: Captain | Support/Flex
   image: cat.png
-  rank: S
-  weapons: Ttek, Splash, Splatlings
+  weapons: Shooters
+  state: QLD
   links: true
   youtube: https://www.youtube.com/channel/UCDplZFvtITfn_rzRUJmt_zg
   twitter: https://twitter.com/CalamarCat
   twitch: https://www.twitch.tv/CalamarCat
-  
-- name: Coach
-  ign: TheCoachAdair
-  position: Support
-  image: coach.png
-  rank: A
-  weapons: Shooters
-  links: true 
-  twitch: https://www.twitch.tv/thecoachadair
-  
-- name: Chomps
-  position: Support
-  image: chomps.jpg
-  rank: S+
-  weapons: Pro, Ttek, Splatlings
-  links: true 
-  twitch: https://www.twitch.tv/chompsontheloose
-  youtube: https://www.youtube.com/channel/UCaEzK7y_SO-7tmJEqoGfVLg?&ab_channel=ChompsOnTheLoose
-  twitter: https://twitter.com/HT_Chomps
-
+    
 - name: Hiero
-  ign: SuperHiero
-  position: Slayer
-  image: flc.png
-  rank: S
-  weapons: Ttek, Gal, Rapid
+  position: Flex
+  image: hiero.png
+  weapons: Ttek, 96 Gal, Rapid Blaster
+  state: NSW
   links: true
+  youtube: https://www.youtube.com/raexis7
+  twitter: https://twitter.com/eRonin
   twitch: https://www.twitch.tv/superhiero
+  
+- name: Konjan
+  position: Slayer/Flank
+  image: konjan.png
+  weapons: Roller, Brella, Shooters, Blasters
+  state: Vic
+  links: true
+  twitter: https://twitter.com/BraveSoleil
+
+- name: Alecat
+  position: Support/Flex
+  image: ale.png
+  weapons: Roller, Brella, Shooters, Blasters
+  state: SA
+  links: true
+  twitter: https://twitter.com/alecatmew
+
+- name: Grace
+  position: Slayer
+  image: grace.png
+  state: Tas
+  weapons: Roller, Brella, Shooters, Blasters
+  links: true
+  twitter: https://twitter.com/SRLGrace
+  twitch: https://twitch.tv/SRLGrace
